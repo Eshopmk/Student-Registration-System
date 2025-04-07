@@ -1,0 +1,151 @@
+/* Reset and basic styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+  }
+  
+  .page-title {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+  
+  /* Layout styling */
+  main {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Equal width for form and table */
+  .form-container,
+  .table-section {
+    flex: 1 1 48%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Form Styling */
+  #registrationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .input-block {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-block label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  .input-block input,
+  .input-block select {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input-block input:focus,
+  .input-block select:focus {
+    border-color: #0066cc;
+    outline: none;
+  }
+  
+  .radio-group,
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .radio-group label,
+  .checkbox-group label {
+    font-weight: normal;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .submit-btn {
+    padding: 12px;
+    background-color: #0066cc;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #004d99;
+  }
+  
+  /* Table Section Styling */
+  .table-section {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table th,
+  .data-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .data-table th {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+  
+  /* Scrollbar styling */
+  .table-section::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .table-section::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .table-section::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .table-section::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    main {
+      flex-direction: column;
+    }
+  
+    .form-container,
+    .table-section {
+      flex: 1 1 100%;
+    }
+  }
+  

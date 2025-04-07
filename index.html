@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Registration System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="page-title">Student Registration System</h1>
+
+  <main>
+    <!-- Form Container -->
+    <div class="form-container">
+      <form id="registrationForm">
+        <div class="input-block">
+          <label for="studentId">Student ID</label>
+          <input type="text" id="studentId" required />
+        </div>
+
+        <div class="input-block">
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+        </div>
+
+        <div class="input-block">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+
+        <div class="input-block">
+          <label for="contact">Contact</label>
+          <input type="text" id="contact" required />
+        </div>
+
+        <div class="input-block">
+          <label>Gender</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="Male" /> Male</label>
+            <label><input type="radio" name="gender" value="Female" /> Female</label>
+            <label><input type="radio" name="gender" value="Other" /> Other</label>
+          </div>
+        </div>
+
+        <div class="input-block">
+          <label for="course">Course</label>
+          <select id="course">
+            <option value="">Select Course</option>
+            <option value="BTech">BTech</option>
+            <option value="BCA">BCA</option>
+            <option value="Other">Other</option>
+          </select>
+          <input type="text" id="otherCourseInput" placeholder="Enter other course" style="display: none;" />
+        </div>
+
+        <div class="input-block">
+          <label>Skills</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="skills" value="HTML" /> HTML</label>
+            <label><input type="checkbox" name="skills" value="CSS" /> CSS</label>
+            <label><input type="checkbox" name="skills" value="JavaScript" /> JavaScript</label>
+            <label><input type="checkbox" name="skills" value="Other" id="otherSkillCheckbox" /> Other</label>
+          </div>
+          <input type="text" id="otherSkillInput" placeholder="Enter other skill" style="display: none;" />
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-section">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Gender</th>
+            <th>Course</th>
+            <th>Skills</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="studentData"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
